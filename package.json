@@ -17,6 +17,9 @@
     "docs",
     "documentation"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "lint": "eslint test/ *.js",
     "lint:fix": "npm run lint -- --fix",
