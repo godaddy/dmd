@@ -1,0 +1,6 @@
+{
+  "extends": "godaddy",
+  "rules": {
+    "max-params": [1, 5]
+  }
+}

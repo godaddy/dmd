@@ -1,0 +1,12 @@
+{{#globals kind=kind~}}
+{{#if @first~}}
+{{>heading-indent}}{{../title}}
+
+Name | Description
+------ | -----------
+{{/if~}}
+{{>sig-link}} | {{{inlineLinks (shortDesc description)}}}
+{{#if @last}}
+
+{{/if}}
+{{/globals}}

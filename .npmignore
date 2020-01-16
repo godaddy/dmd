@@ -1,0 +1,13 @@
+node_modules
+.idea
+*.iml
+*.log
+*.bak
+.DS_Store
+
+### ▲ .gitignore contents above
+### ▼ additional ignore files for publishing
+
+test/*
+.eslintrc
+.gitattributes
