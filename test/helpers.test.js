@@ -1,6 +1,8 @@
 const assume = require('assume');
 const helpers = require('../helpers');
 
+const splitLines = str => str.match(/[^\r\n]+/g);
+
 /**
  * Additional tests of things not demonstrating in output tests.
  */
@@ -17,8 +19,29 @@ describe('helpers', () => {
     it('uses numeric reference links when brackets in title', async () => {
       const fn = () => 'This is an [inline link with [brackets]](#some-link) in it.';
       const results = helpers.refLinks({ fn });
+      const [bodyLine, refLine] = splitLines(results);
 
-      assume(results).includes('[1]');
+      assume(bodyLine).includes('[1]');
+      assume(refLine).equals('[1]:#some-link');
+    });
+
+    it('does not capture previous escaped brackets before link', async () => {
+      const fn = () => 'This \\[escaped\\] before [inline link](#some-link) in it.';
+      const results = helpers.refLinks({ fn });
+      const [, refLine] = splitLines(results);
+
+      assume(refLine).not.includes('escaped');
+      assume(refLine).equals('[inline link]:#some-link');
+    });
+
+    it('captures multiple inline links in same line', async () => {
+      const fn = () => 'Has [link one](#link-one) and [link two](#link-two) in it.';
+      const results = helpers.refLinks({ fn });
+      const lines = splitLines(results);
+
+      assume(lines).lengthOf(3);
+      assume(lines).includes('[link one]:#link-one');
+      assume(lines).includes('[link two]:#link-two');
     });
   });
 

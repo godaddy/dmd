@@ -387,22 +387,10 @@ Preset module with meta data
 [PackageIdentifier]:#packageidentifier
 [isModulePath]:#ismodulepath
 [ONE]:#one
-[pluginIdentifier(rawName, \[options\])]:#pluginidentifierrawname-options
-[isTruthy(something)]:#istruthysomething
 [ModuleInfo]:#moduleinfo
 [PluginInfo]:#plugininfo
 [PresetInfo]:#presetinfo
-[new Resolver(options)]:#new-resolveroptions
-[.resolve(moduleName)]:#loaderresolvemodulename
-[.require(moduleName)]:#loaderrequiremodulename
-[.tryResolve(moduleName)]:#loadertryresolvemodulename
-[.tryRequire(moduleName)]:#loadertryrequiremodulename
 [`Resolver`]:#new-resolveroptions
-[.getModuleInfo(module, moduleName, \[meta\])]:#loadergetmoduleinfomodule-modulename-meta
-[.loadModule(moduleName, \[meta\])]:#loaderloadmodulemodulename-meta
-[.loadPlugin(module, \[meta\])]:#loaderloadpluginmodule-meta
-[.loadPreset(module, \[meta\], \[options\])]:#loaderloadpresetmodule-meta-options
-[.loadConfigured(config)]:#loaderloadconfiguredconfig
 [`Loader`]:#loader
 [`ModuleInfo`]:#moduleinfo
 [`PluginInfo`]:#plugininfo
@@ -415,3 +403,15 @@ Preset module with meta data
 [.version]:#packageidentifierversion
 [.full]:#packageidentifierfull
 [`PackageIdentifier`]:#packageidentifier
+[pluginIdentifier(rawName, \[options\])]:#pluginidentifierrawname-options
+[isTruthy(something)]:#istruthysomething
+[new Resolver(options)]:#new-resolveroptions
+[.resolve(moduleName)]:#loaderresolvemodulename
+[.require(moduleName)]:#loaderrequiremodulename
+[.tryResolve(moduleName)]:#loadertryresolvemodulename
+[.tryRequire(moduleName)]:#loadertryrequiremodulename
+[.getModuleInfo(module, moduleName, \[meta\])]:#loadergetmoduleinfomodule-modulename-meta
+[.loadModule(moduleName, \[meta\])]:#loaderloadmodulemodulename-meta
+[.loadPlugin(module, \[meta\])]:#loaderloadpluginmodule-meta
+[.loadPreset(module, \[meta\], \[options\])]:#loaderloadpresetmodule-meta-options
+[.loadConfigured(config)]:#loaderloadconfiguredconfig
