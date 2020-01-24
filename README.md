@@ -3,6 +3,7 @@
 [![NPM Version](https://img.shields.io/npm/v/@godaddy/dmd?style=flat-square)](https://www.npmjs.com/package/@godaddy/dmd)
 [![Build Status](https://img.shields.io/circleci/build/gh/godaddy/dmd?style=flat-square)](https://circleci.com/gh/godaddy/dmd)
 [![Coverage Status](https://img.shields.io/coveralls/github/godaddy/dmd?style=flat-square)](https://coveralls.io/github/godaddy/dmd)
+[![GitHub](https://img.shields.io/github/license/godaddy/dmd?style=flat-square)](LICENSE.md)
 
 Plugin for [jsdoc2md] with improved readability and GitHub compatibility.
 
