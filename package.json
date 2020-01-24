@@ -15,7 +15,8 @@
     "github",
     "jsdoc",
     "docs",
-    "documentation"
+    "documentation",
+    "plugin"
   ],
   "publishConfig": {
     "access": "public"
