@@ -20,6 +20,7 @@ jobs:
 
       - run: npm ci
       - run: npm test
+      - coveralls/upload
 
       # Save the cache for later use
       - save_cache:
