@@ -23,7 +23,7 @@
   "scripts": {
     "lint": "eslint test/ *.js",
     "lint:fix": "npm run lint -- --fix",
-    "test": "nyc mocha test/*.test.js",
+    "test": "nyc --reporter=lcov mocha test/*.test.js",
     "posttest": "npm run lint",
     "snapshots": "jsdoc2md --plugin . --files test/fixtures/mock.js > test/fixtures/mock.snapshot.md"
   },
