@@ -43,6 +43,24 @@ describe('helpers', () => {
       assume(lines).includes('[link one]:#link-one');
       assume(lines).includes('[link two]:#link-two');
     });
+
+    it('captures method signature titles of inline links', async () => {
+      const fn = () => 'Has [.method(arg1, \\[arg2\\])](#some-method)';
+      const results = helpers.refLinks({ fn });
+      const [, refLine] = splitLines(results);
+
+      assume(refLine).equals('[.method(arg1, \\[arg2\\])]:#some-method');
+    });
+
+    it('does not re-reformat links', async () => {
+      const str = 'Has [link one] and [link two] and [.method(arg1, \\[arg2\\])] in it.';
+      const fn = () => str;
+      const results = helpers.refLinks({ fn });
+      const lines = splitLines(results);
+
+      assume(lines).lengthOf(1);
+      assume(results).startsWith(str);
+    });
   });
 
   describe('shortDesc', () => {
