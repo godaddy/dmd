@@ -1,5 +1,9 @@
 # @godaddy/dmd
 
+[![NPM Version](https://img.shields.io/npm/v/@godaddy/dmd?style=flat-square)](https://www.npmjs.com/package/@godaddy/dmd)
+[![Build Status](https://img.shields.io/circleci/build/gh/godaddy/dmd?style=flat-square)](https://circleci.com/gh/godaddy/dmd)
+[![Coverage Status](https://img.shields.io/coveralls/github/godaddy/dmd?style=flat-square)](https://coveralls.io/github/godaddy/dmd)
+
 Plugin for [jsdoc2md] with improved readability and GitHub compatibility.
 
 This plugin borrows from [dmd-readable] and [dmd-bitbucket] with additional
