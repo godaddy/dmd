@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  coveralls: coveralls/coveralls@1.0.4
 jobs:
   build:
     docker:
@@ -18,6 +20,7 @@ jobs:
 
       - run: npm ci
       - run: npm test
+      - coveralls/upload
 
       # Save the cache for later use
       - save_cache:

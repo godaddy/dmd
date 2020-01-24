@@ -3,6 +3,8 @@ node_modules
 *.iml
 *.log
 *.bak
+.nyc_output
+coverage
 .DS_Store
 
 ### ▲ .gitignore contents above
