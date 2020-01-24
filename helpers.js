@@ -1,6 +1,9 @@
 const slugs = new Map();
 
-const reInlineLinks = /(\[(.+)\])(\(([^)\s]+)\))/g;
+// captures multiple inline links
+const reInlineLinks = /(?<!\\)(\[([^(]+|[.+])\])(\(([^(]+)\))/g;
+// captures inline links with (parentheses) in title
+const reInlineSigLinks = /(?<!\\)(\[(.+)\])(\(([^)\s]+)\))/g;
 const reBrackets = /[^\\]\[|[^\\]]/g;
 const reLeftBrackets = /\[/g;
 const reRightBrackets = /]/g;
@@ -126,11 +129,14 @@ function refLinks(options) {
     refMap.set(name, slug);
   }
 
+  function formatLink(match, brackets, title, parentheses, link) {
+    const ref = safeRef(title, link);
+    return brackets + (ref ? `[${ref}]` : '');
+  }
+
   const content = options.fn(this)
-    .replace(reInlineLinks, (match, brackets, title, parentheses, link) => {
-      const ref = safeRef(title, link);
-      return brackets + (ref ? `[${ref}]` : '');
-    });
+    .replace(reInlineLinks, formatLink)
+    .replace(reInlineSigLinks, formatLink);
 
   let refContent = '<!-- LINKS -->\n\n';
   for (const [name, slug] of refMap) {
