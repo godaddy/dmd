@@ -1,3 +1,7 @@
+## Modules
+Module | Description
+------ | -----------
+[MyComponent] | Expect it to be fancy.
 
 ## Classes
 
@@ -29,6 +33,26 @@ Name | Description
 [PluginInfo] | Plugin module with meta data
 [PresetInfo] | Preset module with meta data
 
+
+## MyComponent
+
+Expect it to be fancy.
+
+Also, consider these notes.
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | `string` | Display name |
+
+**Example**  
+```js
+// comment
+import MyComponent from './my-component';
+export default function MyPage(props) {
+  return <MyComponent name='Fancy' />
+}
+```
 
 ## Resolver
 
@@ -382,6 +406,7 @@ Preset module with meta data
 
 <!-- LINKS -->
 
+[MyComponent]:#mycomponent
 [Resolver]:#resolver
 [Loader]:#loader
 [PackageIdentifier]:#packageidentifier
