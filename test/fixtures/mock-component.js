@@ -1,8 +1,12 @@
 
 /**
- * Expect it to be fancy.
+ * This is a long description of a thing, that is so long it wraps
+ * to the next line.
  *
- * Also, consider these notes.
+ * And here is a note that is really long and needs to wrap
+ * to another line.
+ *
+ * And here is more notes.
  *
  * @module MyComponent
  *

@@ -73,6 +73,16 @@ This is the second paragraph.`;
       assume(results).equals('This is the first paragraph.');
     });
 
+    it('returns only first paragraph', () => {
+      const desc = `This is the first paragraph
+multiline paragraph.
+
+This is the second paragraph.`;
+
+      const results = helpers.shortDesc(desc);
+      assume(results).equals('This is the first paragraph multiline paragraph.');
+    });
+
     it('ignores spaces in empty lines', () => {
       const desc = `This is the first paragraph.
       

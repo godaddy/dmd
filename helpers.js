@@ -103,7 +103,7 @@ function shortDesc(description) {
   if (match) {
     nextDesc = nextDesc.substring(0, match.index);
   }
-  return nextDesc.replace(reNewLines, '');
+  return nextDesc.replace(reNewLines, ' ');
 }
 
 /**
