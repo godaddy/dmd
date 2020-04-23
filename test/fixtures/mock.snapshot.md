@@ -1,3 +1,7 @@
+## Modules
+Module | Description
+------ | -----------
+[MyComponent] | This is a long description of a thing, that is so long it wraps to the next line.
 
 ## Classes
 
@@ -29,6 +33,30 @@ Name | Description
 [PluginInfo] | Plugin module with meta data
 [PresetInfo] | Preset module with meta data
 
+
+## MyComponent
+
+This is a long description of a thing, that is so long it wraps
+to the next line.
+
+And here is a note that is really long and needs to wrap
+to another line.
+
+And here is more notes.
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | `string` | Display name |
+
+**Example**  
+```js
+// comment
+import MyComponent from './my-component';
+export default function MyPage(props) {
+  return <MyComponent name='Fancy' />
+}
+```
 
 ## Resolver
 
@@ -382,6 +410,7 @@ Preset module with meta data
 
 <!-- LINKS -->
 
+[MyComponent]:#mycomponent
 [Resolver]:#resolver
 [Loader]:#loader
 [PackageIdentifier]:#packageidentifier
