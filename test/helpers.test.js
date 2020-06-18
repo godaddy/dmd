@@ -73,7 +73,7 @@ This is the second paragraph.`;
       assume(results).equals('This is the first paragraph.');
     });
 
-    it('returns only first paragraph', () => {
+    it('returns only first paragraph with multilines', () => {
       const desc = `This is the first paragraph
 multiline paragraph.
 
@@ -81,6 +81,26 @@ This is the second paragraph.`;
 
       const results = helpers.shortDesc(desc);
       assume(results).equals('This is the first paragraph multiline paragraph.');
+    });
+
+    it('returns only first paragraph before hard line break with backslash', () => {
+      const desc = `This is the first paragraph. \\
+This has a hard line break.
+
+This is the second paragraph.`;
+
+      const results = helpers.shortDesc(desc);
+      assume(results).equals('This is the first paragraph.');
+    });
+
+    it('returns only first paragraph before hard line break with 2 spaces', () => {
+      const desc = `This is the first paragraph.  
+This has a hard line break.
+
+This is the second paragraph.`;
+
+      const results = helpers.shortDesc(desc);
+      assume(results).equals('This is the first paragraph.');
     });
 
     it('ignores spaces in empty lines', () => {

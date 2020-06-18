@@ -10,7 +10,8 @@ const reRightBrackets = /]/g;
 const reSpaces = /\s+/g;
 const reNonSlugChars = /[^a-z0-9- _]/g;
 const reNewLines = /\n/g;
-const reParagraphBreak = /\n(\s+)?\n/;
+// Finds first paragraph end or line break
+const reParagraphBreak = /(\n(\s+)?\n|\\\n|\s{2}\n)/;
 
 /**
  * Stores a slug for the element
@@ -103,7 +104,7 @@ function shortDesc(description) {
   if (match) {
     nextDesc = nextDesc.substring(0, match.index);
   }
-  return nextDesc.replace(reNewLines, ' ');
+  return nextDesc.replace(reNewLines, ' ').trim();
 }
 
 /**

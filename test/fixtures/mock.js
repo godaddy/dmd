@@ -1,7 +1,7 @@
 /**
  * Module with meta data
  *
- * This is extra text, which should not show up in the table of contents.
+ * Second paragraph, which should not show up in the table of contents.
  *
  * @typedef {object} ModuleInfo
  *
@@ -11,7 +11,8 @@
  */
 
 /**
- * Plugin module with meta data
+ * Plugin module with meta data \
+ * Hard new line, which should not show up in the table of contents.
  *
  * @typedef {ModuleInfo} PluginInfo
  */
