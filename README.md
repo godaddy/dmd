@@ -18,7 +18,7 @@ See the [mock file] for an example of a generated document.
 ## Installation
 
 Install it as a devDependency in target project:
-[[[]]
+
 ```
 $ npm install @godaddy/dmd --save-dev
 ```
