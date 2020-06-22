@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 1.0.3
+
+- Handle hard line breaks for short descriptions ([#7])
+
 ### 1.0.2
 
 - Support short table descriptions for `@module` ([#4])
@@ -18,3 +22,4 @@
 [#1]:https://github.com/godaddy/dmd/pull/1
 [#3]:https://github.com/godaddy/dmd/pull/3
 [#4]:https://github.com/godaddy/dmd/pull/4
+[#7]:https://github.com/godaddy/dmd/pull/7
