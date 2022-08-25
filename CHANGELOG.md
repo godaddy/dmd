@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 1.0.4
+
+- Upgrade dependencies
+
 ### 1.0.3
 
 - Handle hard line breaks for short descriptions ([#7])
