@@ -1,6 +1,6 @@
 {
   "name": "@godaddy/dmd",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Plugin for jsdoc2md with improved readability and GitHub compatibility",
   "repository": "git+ssh://git@github.com/godaddy/dmd.git",
   "main": "index.js",
